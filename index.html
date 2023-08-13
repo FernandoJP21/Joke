@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title class="text">¿Quieres tener una cita conmigo?</title>
+<style>
+
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+    background-color: rgb(129, 10, 10);
+  }
+  #no-button {
+    position: relative;
+    transition: left 0.5s;
+  }
+</style>
+</head>
+<body>
+  <h1>¿Quieres tener una cita conmigo?</h1>
+  <button id="no-button" onclick="moveNoButton()">No</button>
+  <button id="yes-button" onclick="alert('Definimos el día por whatsapp <3 :*')">Sí</button>
+
+  <script>
+    function moveNoButton() {
+      const noButton = document.getElementById('no-button');
+      const randomLeft = Math.random() * (window.innerWidth - 100);
+      noButton.style.left = randomLeft + 'px';
+    }
+  </script>
+</body>
+</html>
